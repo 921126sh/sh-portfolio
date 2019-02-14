@@ -374,7 +374,7 @@
     
                     },
                     error: function(err) {
-    console.log(err)
+                        console.log(err);
                         sLoader.slideUp("slow"); 
                         $('.message-warning').html("Something went wrong. Please try again.");
                         $('.message-warning').slideDown("slow");

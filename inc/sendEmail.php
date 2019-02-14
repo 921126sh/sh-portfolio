@@ -1,13 +1,19 @@
 ﻿<?php
 
+include_once('mailer.lib.php');
 // Replace this with your own email address
 $siteOwnersEmail = 'iampet1@naver.com';
 
 if($_POST) {
+    $error = null;
+    $message = '';
     $name = trim(stripslashes($_POST['contactName']));
-    $email = "esmoney9385@gmail.com"//trim(stripslashes($_POST['contactEmail']));
+    $email = trim(stripslashes($_POST['contactEmail']));
     $subject = trim(stripslashes($_POST['contactSubject']));
-    $contact_message = trim(stripslashes($_POST['contactMessage']));
+    echo $_POST['contactMessage'];
+    $contact_message = trim(stripslashes($_POST['contactMessage'])).replace('<br>', '\n');
+
+
 
     // Check Name
     if (strlen($name) < 2) {
@@ -22,7 +28,9 @@ if($_POST) {
         $error['message'] = "Please enter your message. It should have at least 15 characters.";
     }
     // Subject
-    if ($subject == '') { $subject = "Contact Form Submission"; }
+    if ($subject == '') {
+        $subject = "Contact Form Submission"; 
+    }
 
 
     // Set Message
@@ -42,14 +50,11 @@ if($_POST) {
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
 
-    if (!$error) {
-
-        ini_set("sendmail_from", $siteOwnersEmail); // for windows server
-        $mail = mail($siteOwnersEmail, $subject, $message, $headers);
-
-        if ($mail) { echo "OK"; }
-        else { echo "Something went wrong. Please try again."; }
-        
+    if (true) {
+        //ini_set("sendmail_from", $siteOwnersEmail); // for windows server
+        // mailer("보내는 사람 이름", "보내는 사람 메일주소", "받는 사람 메일주소", "제목", "내용", "1");
+        mailer($name, $siteOwnersEmail, $siteOwnersEmail, $subject, $message, 1);
+        echo "OK"; 
     } # end if - no validation error
 
     else {
@@ -65,6 +70,3 @@ if($_POST) {
 }
 
 ?>
-
-
-
