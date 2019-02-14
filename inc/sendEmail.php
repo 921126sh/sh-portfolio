@@ -1,72 +1,74 @@
 ﻿<?php
 
 include_once('mailer.lib.php');
-// Replace this with your own email address
-$siteOwnersEmail = 'iampet1@naver.com';
 
 if($_POST) {
+    /**
+ 	 * @param Object $error 에러 오브젝트
+ 	 */
     $error = null;
+
+    /**
+ 	 * @param String $ownersEmail 관리자 이메일
+ 	 */
+    $ownersEmail = 'iampet1@naver.com';
+
+    /**
+ 	 * @param String $message 메일 내용
+ 	 */
     $message = '';
+
+    /**
+ 	 * @param String $name 송신자 명
+ 	 */
     $name = trim(stripslashes($_POST['contactName']));
+
+    /**
+ 	 * @param String $email 송시자 메일
+ 	 */
     $email = trim(stripslashes($_POST['contactEmail']));
+
+    /**
+ 	 * @param String $subject 메일 제목
+ 	 */
     $subject = trim(stripslashes($_POST['contactSubject']));
-    echo $_POST['contactMessage'];
-    $contact_message = trim(stripslashes($_POST['contactMessage'])).replace('<br>', '\n');
 
+    /**
+ 	 * @param String $contact_message 송신 내용
+ 	 */
+    $contact_message = trim(stripslashes($_POST['contactMessage']));
 
-
-    // Check Name
+    // 입력항목에 대해 유효성검증을 한다.
     if (strlen($name) < 2) {
         $error['name'] = "Please enter your name.";
     }
-    // Check Email
     if (!preg_match('/^[a-z0-9&\'\.\-_\+]+@[a-z0-9\-]+\.([a-z0-9\-]+\.)*+[a-z]{2}/is', $email)) {
         $error['email'] = "Please enter a valid email address.";
     }
-    // Check Message
     if (strlen($contact_message) < 15) {
         $error['message'] = "Please enter your message. It should have at least 15 characters.";
     }
-    // Subject
     if ($subject == '') {
         $subject = "Contact Form Submission"; 
     }
 
-
-    // Set Message
+    // 컨텐츠 내용을 설정한다.
     $message .= "Email from: " . $name . "<br />";
     $message .= "Email address: " . $email . "<br />";
     $message .= "Message: <br />";
     $message .= $contact_message;
     $message .= "<br /> ----- <br /> This email was sent from your site's contact form. <br />";
 
-    // Set From: header
-    $from =  $name . " <" . $email . ">";
-
-    // Email Headers
-    $headers = "From: " . $from . "\r\n";
-    $headers .= "Reply-To: ". $email . "\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-
-
-    if (true) {
-        //ini_set("sendmail_from", $siteOwnersEmail); // for windows server
-        // mailer("보내는 사람 이름", "보내는 사람 메일주소", "받는 사람 메일주소", "제목", "내용", "1");
-        mailer($name, $siteOwnersEmail, $siteOwnersEmail, $subject, $message, 1);
+    if ($error == null) {
+        mailer($name, $ownersEmail, $ownersEmail, $subject, $message, 1);
         echo "OK"; 
-    } # end if - no validation error
-
+    }
     else {
-
         $response = (isset($error['name'])) ? $error['name'] . "<br /> \n" : null;
         $response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
         $response .= (isset($error['message'])) ? $error['message'] . "<br />" : null;
         
         echo $response;
-
-    } # end if - there was a validation error
-
+    }
 }
-
 ?>
