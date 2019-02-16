@@ -4136,3 +4136,15 @@ article.blog-single .blog-content {
         display: none;
     }
 }
+
+
+/* ------------------------------------------------------------------- 
+ * CUSTOM
+ * ------------------------------------------------------------------- */
+.myself-img-container {
+    width: 31rem;
+    height: 31rem;
+    box-shadow: 0 0 0 0.9rem rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    outline: none;
+}
