@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!-- [if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
+<!--[if (gte IE 9)|!(IE)]><! -->
 <html class="no-js" lang="en">
 <!--<![endif]-->
 
 <head>
 
-    <!--- basic page needs
+    <!--- 메타 정보
     ================================================== -->
     <meta charset="utf-8">
     <title>SH 개발이야기</title>
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <!-- mobile specific metas
-    ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS
@@ -24,7 +21,7 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- script
+    <!-- 스크립트
     ================================================== -->
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
@@ -37,7 +34,7 @@
 </head>
 
 <body id="top">
-    <!-- header
+    <!-- 헤더
     ================================================== -->
     <header class="s-header">
         <div class="header-logo">
@@ -58,10 +55,10 @@
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
-    </header> <!-- end s-header -->
+    </header> <!-- / 헤더 -->
 
 
-    <!-- home
+    <!-- 홈
    ================================================== -->
     <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg"
         data-natural-width=3000 data-natural-height=2000 data-position-y=center>
@@ -69,17 +66,14 @@
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
 
+        <!-- 홈 컨텐츠 -->
         <div class="home-content">
-
             <div class="row home-content__main">
-
                 <h3>HELLO</h3>
-
                 <h1>
                     I am SeongHyun Kim. <br>
                     I am a Web Developer <br>
                 </h1>
-
                 <div class="home-content__buttons">
                     <a href="#works" class="smoothscroll btn btn--stroke">
                         Latest Projects
@@ -88,67 +82,55 @@
                         More About Me
                     </a>
                 </div>
-
                 <div class="home-content__scroll">
                     <a href="#about" class="scroll-link smoothscroll">
                         <span>Scroll Down</span>
                     </a>
                 </div>
-
             </div>
+        </div><!-- / 홈 컨텐츠 -->
 
-        </div> <!-- end home-content -->
-
+        <!-- 홈 소셜 -->
         <ul class="home-social">
-            <!-- <li>
-                <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="im im-behance" aria-hidden="true"></i><span>Behance</span></a>
-            </li> -->
             <li>
                 <a href="https://github.com/esmoney"><i class="im im-github" aria-hidden="true"></i><span>GitHub</span></a>
             </li>
-        </ul>
-        <!-- end home-social -->
+        </ul> <!-- / 홈 소셜 -->
 
-    </section> <!-- end s-home -->
+    </section> <!-- / 홈 -->
 
 
-    <!-- about
+    <!-- 어바웃
     ================================================== -->
     <section id="about" class="s-about target-section">
 
         <div class="row narrow section-intro has-bottom-sep">
             <div class="col-full text-center">
                 <h3>About</h3>
-                <!-- <p class="lead">“좋은 프로그래머 대부분은 돈이나 대중에게 받을 찬사를 기대하고
-                    프로그래밍을 하지 않고 프로그래밍이 재미 있어서 한다.” - 찰스 배비지</p> -->
-                <p class="lead">"고민은 즐거움, 새로움은 설렘 프로그램의 끝은 없다!”</p>
+                <p class="lead">"논리적 사고를 통한 문제해결을 즐기는 개발자!”</p>
             </div>
         </div>
 
+        <!-- 자기소개 -->
         <div class="row about-content">
-
             <div class="col-six tab-full left">
-                <h3>WHO AM I</h3>
-
-                <p>작성중입니다....../</p>
+                <div style="text-align: center;">
+                    <img src="images/sh.jpg" alt="Author image" class="myself-img-container">
+                </div>
+                <p style="font-weight: bolder;text-align: center;font-size: 3rem;">Who's this guy?</p>
 
                 <p>
-                    작성중입니다....../
+                    R&D소속으로 금융권에서 풀스택을 개발해온 웹 개발자입니다. <br>
+                </p>
+
+                <p>
+                    저는 새로운 환경을 두려워하지 않고 신기술에 흥미가 많으며 소스코드 하나하나에 많은
+                    고민을 가지고 사용자에게 서비스를 제공 합니다. <br />
+                    좋은 동료들과 서로의 코드를 공유하며 영양가 있는 코드리뷰 시간을 갖고 싶습니다.
                 </p>
             </div>
 
             <div class="col-six tab-full right">
-                <h3>MY SKILL</h3>
-
                 <ul class="skill-bars">
                     <li>
                         <div class="progress percent90"><span>80%</span></div>
@@ -171,6 +153,10 @@
                         <strong>JAVA</strong>
                     </li>
                     <li>
+                        <div class="progress percent80"><span>80%</span></div>
+                        <strong>REST-API</strong>
+                    </li>
+                    <li>
                         <div class="progress percent70"><span>70%</span></div>
                         <strong>RDBMS</strong>
                     </li>
@@ -180,11 +166,10 @@
                     </li>
                 </ul>
             </div>
+        </div> <!-- / 자기소개 -->
 
-        </div> <!-- end about-content -->
-
+        <!-- 작업 경험 -->
         <div class="row about-content about-content--timeline">
-
             <div class="col-full text-center">
                 <h3>Work Experience.</h3>
             </div>
@@ -200,10 +185,6 @@
                             <h5>full-stack developer</h5>
                         </div>
                         <div class="timeline__desc">
-                            <!-- <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi
-                                cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident
-                                cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est
-                                occaecat nisi.</p> -->
                             <p>
                                 <ul>
                                     <li>Angular4 to Angular7</li>
@@ -213,7 +194,7 @@
                                 </ul>
                             </p>
                         </div>
-                    </div> <!-- end timeline__block -->
+                    </div>
 
                     <div class="timeline__block">
                         <div class="timeline__bullet"></div>
@@ -231,10 +212,10 @@
                                 </ul>
                             </p>
                         </div>
-                    </div> <!-- end timeline__block -->
+                    </div>
 
-                </div> <!-- end timeline -->
-            </div> <!-- end left -->
+                </div>
+            </div>
 
             <div class="col-six tab-full right">
                 <div class="timeline">
@@ -256,7 +237,7 @@
                                 </ul>
                             </p>
                         </div>
-                    </div> <!-- end timeline__block -->
+                    </div>
 
                     <div class="timeline__block">
                         <div class="timeline__bullet"></div>
@@ -272,17 +253,17 @@
                                 <li>안정화 작업</li>
                             </p>
                         </div>
-                    </div> <!-- end timeline__block -->
+                    </div>
 
-                </div> <!-- end timeline -->
-            </div> <!-- end right -->
+                </div>
+            </div>
 
-        </div> <!-- end about-content timeline -->
+        </div><!-- / 작업 경험 -->
 
-    </section> <!-- end about -->
+    </section> <!-- / 어바웃 -->
 
 
-    <!-- works
+    <!-- 포트폴리오
     ================================================== -->
     <section id="works" class="s-works target-section">
 
@@ -298,7 +279,7 @@
         <div class="row masonry-wrap">
             <div class="masonry">
 
-                <!-- <div class="masonry__brick">
+                <div class="masonry__brick">
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
@@ -554,17 +535,17 @@
                         </span>
 
                     </div>
-                </div> -->
-
-            
-            <!-- </div> -->
-        </div> <!-- end masonry -->
-
-    </section> <!-- end works -->
+                </div>
 
 
+                </div>
+            </div> 
 
-    <!-- testimonials
+    </section> <!-- / 포트폴리오 -->
+
+
+
+    <!-- 현재 관심사
     ================================================== -->
     <div class="s-testimonials">
 
@@ -572,8 +553,7 @@
 
         <div class="row testimonials-header">
             <div class="col-full">
-                <!-- <h1 class="h02">What People Say.</h1> -->
-                <h1 class="h02">작성중입니다....../</h1>
+                <h1 class="h02">현재 나의 관심사!</h1>
             </div>
         </div>
 
@@ -582,72 +562,39 @@
             <div class="col-full testimonials__slider">
 
                 <div class="testimonials__slide">
-                    <img src="images/sample-image.jpg" alt="Author image" class="testimonials__avatar">
-                    <p>작성중입니다....../</p>
+                    <img src="images/interested/TDD.png" alt="Author image" class="testimonials__avatar">
+                    <p>TDD</p>
                     <div class="testimonials__author h06">
-                        ../
-                        <span>../</span>
-                    </div>
-                </div>
-                <div class="testimonials__slide">
-                    <img src="images/sample-image.jpg" alt="Author image" class="testimonials__avatar">
-                    <p>작성중입니다....../</p>
-                    <div class="testimonials__author h06">
-                        ../
-                        <span>../</span>
-                    </div>
-                </div>
-                <div class="testimonials__slide">
-                    <img src="images/sample-image.jpg" alt="Author image" class="testimonials__avatar">
-                    <p>작성중입니다....../</p>
-                    <div class="testimonials__author h06">
-                        ../
-                        <span>../</span>
-                    </div>
-                </div>
-                <!-- <div class="testimonials__slide">
-                    <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
-                    <p>Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum.
-                        Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium
-                        quos qui praesentium corpori.</p>
-                    <div class="testimonials__author h06">
-                        Tim Cook
-                        <span>CEO, Apple</span>
+                        제공하는 서비스에 대한 검증은 물론이고, 논리/사고 범위를 넓혀 주는 TDD를 조금 더 적극적으로 활용해야 한다.<br />
+                        케트백 저자의 테스트 주도 개발을 읽고 TDD에 대한 나의 생각이 조금 더 성장했다.
                     </div>
                 </div>
 
                 <div class="testimonials__slide">
-                    <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
-                    <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi
-                        adipisci.
-                        Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus
-                        quisquam vel.</p>
+                    <img src="images/interested/RX.png" alt="Author image" class="testimonials__avatar">
+                    <p>RxJS</p>
                     <div class="testimonials__author h06">
-                        Sundar Pichai
-                        <span>CEO, Google</span>
+                        개발단계에서는 잘 모른다. 하지만 유지 보수를 하게 된다면 커플링이 심해진 자신의 소스를 보게 된다.<br />
+                        손착욱 저자의 RxJS퀵스타트를 읽고 꼭 활용해봐야 겠다는 생각을 가졌다.
                     </div>
                 </div>
 
                 <div class="testimonials__slide">
-                    <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
-                    <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt.
-                        Ducimus aut sed ipsam.
-                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius
-                        distinctio.</p>
+                    <img src="images/interested/SPRING.png" alt="Author image" class="testimonials__avatar">
+                    <p>SPRING</p>
                     <div class="testimonials__author h06">
-                        Satya Nadella
-                        <span>CEO, Microsoft</span>
+                        스프링을 사용하고 활용할 줄 알지만 누군가에게 개념을 설명 할 단계는 아닌 듯 하다. <br>
+                        토비의 스프링과 실전 예제를 통해 굳히기 들어가자!
                     </div>
-                </div> -->
+                </div>
+            </div>
 
-            </div> <!-- end testimonials__slider -->
+        </div>
 
-        </div> <!-- end testimonials -->
-
-    </div> <!-- end s-testimonials -->
+    </div> <!-- / 현재 관심사 -->
 
 
-    <!-- s-cta
+    <!-- 마치며
     ================================================== -->
     <section class="s-cta">
 
@@ -659,19 +606,17 @@
 
                 <p class="lead">
                     웹 개발뿐만이 아닌 프로그램과 관련된 일이라면 무엇이든 즐겁습니다. <br>
-                    함께 일할 준비는 되었으니 연락부탁드립니다!
+                    개발자로 앞으로 끝없는 성장을 해 나갈 것입니다. 많은 관심 부탁드립니다!
                 </p>
 
             </div>
 
-        </div> <!-- end cta -->
+        </div>
 
-    </section>
-
-
+    </section><!-- / 마치며 -->
 
 
-    <!-- s-stats
+    <!-- 컨테트
     ================================================== -->
     <section id="contact" class="s-contact target-section">
 
@@ -738,7 +683,7 @@
             <div class="col-four tab-full contact__infos">
                 <h4 class="h06">Phone</h4>
                 <p>
-                    Phone: (+82) 6344 9746
+                    Phone: (+82) 10 6344 9746
                 </p>
 
                 <h4 class="h06">Email</h4>
@@ -755,10 +700,10 @@
 
         </div>
 
-    </section> <!-- end s-contact -->
+    </section> <!-- / 컨테트 -->
 
 
-    <!-- footer
+    <!-- 푸터
     ================================================== -->
     <footer>
         <div class="row">
@@ -807,12 +752,12 @@
                 </div>
             </div>
 
-        </div> <!-- end footer-bottom -->
+        </div> <!-- / footer-bottom -->
 
-    </footer> <!-- end footer -->
+    </footer> <!-- / 푸터 -->
 
 
-    <!-- photoswipe background
+    <!-- 첫 페이지 이동
     ================================================== -->
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
 
@@ -849,7 +794,7 @@
 
         </div>
 
-    </div><!-- end photoSwipe background -->
+    </div><!-- / 첫 페이지 이동 -->
 
     <div id="preloader">
         <div id="loader"></div>
